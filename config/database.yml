@@ -1,0 +1,24 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: fav_development
+  pool: 5
+  username: keithstrand
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: fav_test
+  pool: 5
+  username: keithstrand
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: fav_production
+  pool: 5
+  username: keithstrand
+  password:
