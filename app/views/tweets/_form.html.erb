@@ -1,0 +1,11 @@
+<p>Go get a tweet.</p>
+
+<%= form_for @tweet do |f| %>
+  <%= f.label'Put a tweet id here', :tweet_id %>:
+  <%= f.text_field :tweet_id %><br />
+  <%= f.submit %>
+<% end %>
+
+<% @tweets.each do |tweet| %>
+  <%= tweet.body %>
+<% end %>
