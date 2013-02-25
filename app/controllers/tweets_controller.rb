@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new
-    @tweet.body = Twitter.status(params[:tweet_id])
+    @tweet.body = Twitter.status(params[:tweet_id].to_i)
     puts "+++++++++++++"
     puts @tweet.body.text
     puts "++++++++++++++"
