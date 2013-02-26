@@ -1,5 +1,5 @@
 <%= form_for @tweet do |f| %>
-  <%= f.label'Put a tweet id here', :tweet_id %>:
+  <%= f.label :tweet_id %>
   <%= f.text_field :tweet_id %>
   <%= f.submit %>
 <% end %>
@@ -10,7 +10,8 @@
   </tr>
   <% @tweets.each do |tweet| %>
   <tr>
-    <td> <%= tweet.body %>  </td><br />
+    <td> <%= tweet.body %>  </td>
+    <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
   </tr>
 </table>
   <% end %>
