@@ -8,10 +8,11 @@ gem 'rails', '3.2.11'
 gem 'pg' 
 gem 'twitter'
 
+#gem 'thin'
+
 group :development, :test do
  gem 'rspec-rails'
  gem 'quiet_assets'
- gem 'thin'
  gem "factory_girl_rails", "~> 4.0"
 end
 
