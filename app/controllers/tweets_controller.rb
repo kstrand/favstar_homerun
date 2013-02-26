@@ -15,9 +15,13 @@ class TweetsController < ApplicationController
   def create
 
     @tweet = Tweet.new(params[:tweet])
-    @tweet.body = Twitter.status(@tweet.tweet_id).text
+    begin
+      @tweet.body = Twitter.status(@tweet.tweet_id).text
+    rescue => error
+       flash[:notice] = "You should enter a legit tweet id."
+    end
     @tweet.save
-    redirect_to new_tweet_path 
+    redirect_to new_tweet_path
   end
 
   def edit

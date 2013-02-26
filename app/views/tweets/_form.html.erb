@@ -1,19 +1,16 @@
-
 <%= form_for @tweet do |f| %>
   <%= f.label'Put a tweet id here', :tweet_id %>:
   <%= f.text_field :tweet_id %>
   <%= f.submit %>
 <% end %>
 
-
 <table id="table">
   <tr>
-    <th>Tweets </th>
+    <th>Tweets</th>
   </tr>
   <% @tweets.each do |tweet| %>
-    <tr>
-      <td> <%= tweet.body %>  </td><br />
-    </tr>
-
+  <tr>
+    <td> <%= tweet.body %>  </td><br />
+  </tr>
 </table>
   <% end %>

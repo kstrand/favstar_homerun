@@ -5,10 +5,15 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-<%# = debug(params)%>
-<%= yield %>
+  </head>
+  <body>
+    <div id="container">
+    <%# = debug(params)%>
 
-</body>
+    <% if flash[:notice] -%>
+        <p id='notice'><%=h flash[:notice] %></p>
+    <% end %>
+      <%= yield %>
+    </div>
+  </body>
 </html>
