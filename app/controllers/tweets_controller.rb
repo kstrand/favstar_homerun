@@ -13,13 +13,11 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new
-    @tweet.body = Twitter.status(params[:tweet_id].to_i)
-    puts "+++++++++++++"
-    puts @tweet.body.text
-    puts "++++++++++++++"
+
+    @tweet = Tweet.new(params[:tweet])
+    @tweet.body = Twitter.status(@tweet.tweet_id).text
     @tweet.save
-    #redirect_to new_tweet_path 
+    redirect_to new_tweet_path 
   end
 
   def edit
