@@ -1,7 +1,7 @@
 <%= form_for @tweet do |f| %>
-  <%= f.label :tweet_id %>
+  <%= f.label :tweet_id ,('enter tweet id') %>
   <%= f.text_field :tweet_id %>
-  <%= f.submit %>
+  <%= f.submit 'fetch a tweet' %>
 <% end %>
 
 <table id="table">
