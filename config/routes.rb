@@ -1,7 +1,7 @@
 Favstar::Application.routes.draw do
 
   resources :tweets
-  root to: "tweets#new"
+  root to: "tweets#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
