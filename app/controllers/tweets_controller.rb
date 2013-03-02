@@ -15,6 +15,7 @@ class TweetsController < ApplicationController
   def create
 
     @tweet = Tweet.new(params[:tweet])
+
     begin
       @tweet.body = Twitter.status(@tweet.tweet_id).text
     rescue => error
