@@ -25,9 +25,9 @@
   
     <% @tweets.each do |tweet| %>
       <tr>
-        <td><%= tweet.body %> </td>
+        <td><%= tweet.body %> <%= tweet.name %> </td>
   
-        <td><%= tweet.name %> </td>
+        <td></td>
     
         <td><%= link_to 'de-tweet', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
       </tr> 
