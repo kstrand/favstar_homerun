@@ -14,10 +14,11 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new(params[:tweet])
-
+  
     begin
-      @tweet.body = Twitter.status(@tweet.tweet_id).text
       @tweet.name = Twitter.status(@tweet.tweet_id).user.name
+      @tweet.body = Twitter.status(@tweet.tweet_id).text
+      
       
     rescue => error
        flash[:notice] = "You should enter a legit tweet id."

@@ -7,22 +7,10 @@
   <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="container" >
-      <div class="contentWrapper">
-        <div class="well well-large">
-          <%# = debug(params)%>
 
-    <% if flash[:notice] -%>
-
-        <p id='notice'> <%=h flash[:notice] %> </p>
-    
-    <% end %>
-
-      <%= yield %>
-
-        </div>
-      </div>
-    </div>
+    <%# = debug(params)%>
+     
+        <%= yield %>
 
   </body>
 </html>

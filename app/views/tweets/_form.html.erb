@@ -1,5 +1,9 @@
 
-  
+  <div>
+    <% if flash[:notice] -%>
+        <p id='notice'> <%=h flash[:notice] %> </p>
+      <% end %>
+
   <%= form_for @tweet,:html => { :class => "form-inline" } do |f|  %>
 
  <% if @tweet.errors.any? %>
@@ -20,17 +24,20 @@
 
 
 
-<table class="table table-bordered">
+<table class="table table-hover">
+
   <th class="table_head">Tweets</th>
+  <th class="table_head">Author</th>
+  <th class="table_head">de-tweet</th>
   
     <% @tweets.each do |tweet| %>
       <tr>
-        <td><%= tweet.body %> <%= tweet.name %> </td>
+        <td><%= tweet.body %></td>
   
-        <td></td>
+        <td><%= tweet.name %></td>
     
-        <td><%= link_to 'de-tweet', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
+        <td><%= link_to 'de-tweet', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr> 
     <% end %>
 </table>
- 
+</div>
