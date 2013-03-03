@@ -1,10 +1,11 @@
-<%= form_for @tweet do |f| %>
-  <%= f.label :tweet_id ,('enter tweet id') %>
-  <%= f.text_field :tweet_id %>
-<!--     <%= f.label :body %>
-  <%= f.text_field :body %> -->
-  <%= f.submit 'fetch a tweet' %>
-<% end %>
+<!-- <form class="form-inline"> -->
+  
+  <%= form_for @tweet,:html => { :class => "form-inline" } do |f|  %>
+    <%= f.text_field :tweet_id %>
+    <%= f.submit 'fetch a tweet', class: "btn btn-primary" %>
+  <% end %>
+
+<!-- </form> -->
 
 <table id="table">
   <tr>
@@ -12,7 +13,8 @@
   </tr>
   <% @tweets.each do |tweet| %>
   <tr>
-    <td> <%= tweet.body %>  </td>
+    <td><%= tweet.body %></td>
+
     <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
   </tr>
 </table>

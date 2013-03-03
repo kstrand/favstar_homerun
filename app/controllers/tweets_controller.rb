@@ -17,6 +17,7 @@ class TweetsController < ApplicationController
 
     begin
       @tweet.body = Twitter.status(@tweet.tweet_id).text
+      
     rescue => error
        flash[:notice] = "You should enter a legit tweet id."
     end
