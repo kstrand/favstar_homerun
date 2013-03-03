@@ -17,10 +17,12 @@ class TweetsController < ApplicationController
 
     begin
       @tweet.body = Twitter.status(@tweet.tweet_id).text
+      @tweet.name = Twitter.status(@tweet.tweet_id).user.name
       
     rescue => error
        flash[:notice] = "You should enter a legit tweet id."
     end
+    
     @tweet.save
     redirect_to new_tweet_path      
   end

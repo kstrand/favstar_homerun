@@ -1,21 +1,36 @@
-<!-- <form class="form-inline"> -->
+
   
   <%= form_for @tweet,:html => { :class => "form-inline" } do |f|  %>
+
+ <% if @tweet.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@tweet.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
+    <% @tweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+
     <%= f.text_field :tweet_id %>
     <%= f.submit 'fetch a tweet', class: "btn btn-primary" %>
   <% end %>
 
-<!-- </form> -->
 
-<table id="table">
-  <tr>
-    <th>Tweets</th>
-  </tr>
-  <% @tweets.each do |tweet| %>
-  <tr>
-    <td><%= tweet.body %></td>
 
-    <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
-  </tr>
+<table class="table table-bordered">
+  <th class="table_head">Tweets</th>
+  
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td><%= tweet.body %> </td>
+  
+        <td><%= tweet.name %> </td>
+    
+        <td><%= link_to 'de-tweet', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
+      </tr> 
+    <% end %>
 </table>
-  <% end %>
+ 
