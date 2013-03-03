@@ -13,7 +13,6 @@ class TweetsController < ApplicationController
   end
 
   def create
-
     @tweet = Tweet.new(params[:tweet])
 
     begin
@@ -22,7 +21,7 @@ class TweetsController < ApplicationController
        flash[:notice] = "You should enter a legit tweet id."
     end
     @tweet.save
-    redirect_to new_tweet_path
+    redirect_to new_tweet_path      
   end
 
   def edit
