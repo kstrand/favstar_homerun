@@ -30,8 +30,16 @@ a {
 }
 
 div {
+
+  margin-left: 10%;
+  margin-top: 130px;
+  background-color: white;
+  width: 80%;
+  
   &.field, &.actions {
     margin-bottom: 10px;
+
+    
   }
 }
 
