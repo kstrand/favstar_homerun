@@ -13,6 +13,13 @@ describe Tweet do
   	FactoryGirl.build(:tweet, body: nil).should_not be_valid
   end
 
+  describe "is valid when" do
+    context "correct number of digits" do
+      it "is valid with a 10 digit id " do
+        FactoryGirl.build(:tweet, tweet_id: "0123456789").should  be_valid
+      end 
+    end
 
+    end
 
 end
