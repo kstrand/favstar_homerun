@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :tweet do
-    tweet_id 1
+    tweet_id "1234567890"
     body "MyText"
+    # name "Bob"
   end
 end
