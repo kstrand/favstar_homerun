@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #dff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 15px;
@@ -10,6 +10,11 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   line-height: 18px;
 
+}
+
+.shadow {
+-moz-box-shadow: 0 10px 20px 1px #999;
+-webkit-box-shadow: 0 10px 20px 1px #999;
 }
 
 h1 {
@@ -41,8 +46,8 @@ div {
 
  /* margin-left: 10%;
   margin-top: 100px;*/
-  background-color: rgba(235,235,220,.3);
-  width: 90%;
+  background-color: white;/*rgba(235,235,220,.3);*/
+  width: 70%;
 
   &.field, &.actions {
     margin-bottom: 10px;
