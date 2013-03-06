@@ -7,17 +7,13 @@
 took me really like two days to figure out that the bootstrap scaffolding can only be over ridden 
 in the corresponding css for the file in question and I'm not even sure that is true.
 
-
 */
-
-
-
 
 .app_info{
 /*float: left;*/
-padding: 20px 40px 10px 30px;
+padding: 10px 10px 10px 10px;
 text-align: left;
-margin: 50px 50px 50px 50px;
+margin: 20px 20px 20px 50px;
 border:1.5px solid rgba(128,123,128,.5);
 width: 30%;
 height: 100%;
@@ -27,14 +23,15 @@ border-style:inset;
 
 .title_div{
 /*float: left;*/
-
-padding: 20px 40px 10px 30px;
+border-radius: 0px;
+color:white;
+padding: 10px 40px 10px 60px;
 text-align: left;
-margin: 50px 50px 50px 50px;
+margin: 0px 0px 0px 0px;
 border:px solid rgba(128,123,128,.5);
-width: 30%;
+width: 100%;
 height: 100%;
-background-color: white;
+background-color: red;
 
 }
 

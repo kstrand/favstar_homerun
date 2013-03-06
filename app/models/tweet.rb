@@ -5,7 +5,7 @@ class Tweet < ActiveRecord::Base
   
   attr_accessible :body, :tweet_id, :name
 
-
+  validate :twitter_body_cannot_be_blank
 
 
   def tweeter_name(tweet_id_string)
@@ -15,5 +15,14 @@ class Tweet < ActiveRecord::Base
   def tweet_text(tweet_id_string)
   	self.body = Twitter.status(tweet_id_string).text
   end
+
+  def twitter_body_cannot_be_blank
+    if self.body.blank?
+      errors.add(:tweet, "can't be in the past")
+    else
+    	true
+    end
+  end
+
 
 end
