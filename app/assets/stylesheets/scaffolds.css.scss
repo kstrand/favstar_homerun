@@ -8,10 +8,13 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
- /* font-size: 13px;*/
   line-height: 18px;
+
 }
 
+h2 {
+  font-family: 'Montserrat'
+}
 pre {
   background-color: #eee;
   padding: 10px;
@@ -29,13 +32,17 @@ a {
   }
 }
 
-div {
 
-  margin-left: 10%;
-  margin-top: 130px;
-  background-color: white;
-  width: 80%;
-  
+div {
+  padding: 10px 10px 10px 10px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 8px;
+
+ /* margin-left: 10%;
+  margin-top: 100px;*/
+  background-color: rgba(235,235,220,.3);
+  width: 90%;
+
   &.field, &.actions {
     margin-bottom: 10px;
 
